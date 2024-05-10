@@ -16,7 +16,7 @@ If you find our project useful, please 🌟 our projects and cite the following 
 ```
 
 ## Todos
-* [ ] Publish the multi-threads preprocessing code for MRI and PET brain images.
+* [ ] Publish the **multi-threads preprocessing code** for **3D MRI and PET brain images**.
 * [ ] Publish CNN-based 3D medical cross-modality synthesis codes. (UNet, DenseUNet, SwinUNetr, etc.)
 * [ ] Publish GAN-based 3D medical cross-modality syhtesis codes. (Pix2Pix, CycleGAN, ErGAN, ShareGAN, MultiShareGAN, etc).
 * [ ] Publish Sora/DiT-version Diffusion-based 3D medical cross-modality synthesis codes.
@@ -25,3 +25,5 @@ If you find our project useful, please 🌟 our projects and cite the following 
 
 
 ## Updates
+* April, 2024: Initial commit.
+* May, 2024: update data preprocessing codes for 3D MRI and PET brain images.
