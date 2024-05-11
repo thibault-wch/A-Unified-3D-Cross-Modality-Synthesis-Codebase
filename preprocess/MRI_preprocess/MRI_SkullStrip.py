@@ -15,7 +15,7 @@ def recon_all(original_path, out_path ,final_path ,filename,datatype,preprocess_
     out_path :temporal FreeSurfered datapath
     final_path : final output datapath
     subjectid : finalid
-    preprocess_step
+    preprocess_step : [1] for recon-all 1-5 steps [2] for the copy operation
     """
     if datatype=='nii':
         subjectid =filename[:-4]
@@ -24,7 +24,7 @@ def recon_all(original_path, out_path ,final_path ,filename,datatype,preprocess_
 
     cur_path = out_path + '/' + str(subjectid)
     if preprocess_step==1:
-        cmd1 = "recon-all -i {}/{}.nii -autorecon1 -subjid {}".format(original_path, subjectid, subjectid)
+        cmd1 = "recon-all -i {}/{} -autorecon1 -subjid {}".format(original_path, filename, subjectid)
         cmd2 = "&&mri_convert {}/mri/brainmask.mgz {}/mri/brainmask.nii.gz".format(cur_path, cur_path)
         cmd =cmd1+cmd2
     else:
@@ -44,6 +44,40 @@ def recon_all(original_path, out_path ,final_path ,filename,datatype,preprocess_
 
 
 if __name__ == '__main__':
+    """
+    [A] original_path
+        |___A.nii.gz / A.nii
+        |___B.nii.gz / B.nii
+        |___C.nii.gz / C.nii
+        |___ ... ...
+        |___N.nii.gz / N.nii
+        
+    [B] out_path
+        |___A_subjectid
+        |   |___mri---brainmask.mgz
+        |   |___...
+        |
+        |___B_subjectid
+        |   |___mri---brainmask.mgz
+        |   |___...
+        |
+        |___C_subjectid
+        |   |___mri---brainmask.mgz
+        |   |___...
+        |
+        |___...
+        |
+        |___N_subjectid
+            |___mri---brainmask.mgz
+            |___...
+        
+    [C] final_path
+        |___A.nii.gz / A.nii
+        |___B.nii.gz / B.nii
+        |___C.nii.gz / C.nii
+        |___ ... ...
+        |___N.nii.gz / N.nii
+    """
     # args definition
     parser = argparse.ArgumentParser()
     parser.add_argument('-ncore', type=int, default=1,help='the total cores for multiprocess.')
@@ -54,10 +88,12 @@ if __name__ == '__main__':
     parser.add_argument('-final_path',type=str, default='/public/home/chenhui/Radio/NEW_BL/MRI/2_After_Final',help='the final path.')
     args = parser.parse_args()
 
-    # logger establish
+    # logger establish and examine the out path
     if not os.path.exists(args.logdir):
         os.makedirs(args.logdir)
     trace = logger.add(os.path.join(args.logdir, datetime.now().strftime("%Y-%m-%d  %H:%M:%S") + '.log'))
+    if not os.path.exists(args.out_path):
+        os.makedirs(args.out_path)
 
     # preprocessed original path
     datalist = os.listdir(args.original_path)
