@@ -21,7 +21,7 @@ If you find our project useful, please 🌟 our projects and cite the following 
 * [ ] Publish CNN-based 3D medical cross-modality synthesis codes. (UNet, DenseUNet, SwinUNetr, etc.)
 * [ ] Publish GAN-based 3D medical cross-modality syhtesis codes. (Pix2Pix, CycleGAN, ErGAN, ShareGAN, MultiShareGAN, etc).
 * [ ] Publish Sora/DiT-version Diffusion-based 3D medical cross-modality synthesis codes.
-* [X] Publish **3D evaluation methods (MAE, PSNR, SSIM)**.
+* [X] ~~Publish **3D evaluation methods (MAE, PSNR, SSIM)**.~~
 * [ ] Publish a series of brain analysis and interpretable methods.
 
 
