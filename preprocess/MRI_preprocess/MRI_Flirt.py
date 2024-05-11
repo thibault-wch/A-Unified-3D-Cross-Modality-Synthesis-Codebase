@@ -11,10 +11,12 @@ from loguru import logger
 
 def registration(original_path, out_path,filename,datatype):
     '''
-    按照对应的itempairs采用FSL进行往MNI152模板的配准
-
-        parameters: item - - : 对应的1个itempairs中的数目
-        returns: None
+    original_path: the original data path
+    out_path :temporal FreeSurfered datapath
+    final_path : final output datapath
+    subjectid : finalid
+    preprocess_step : [1] for recon-all 1-5 steps [2] for the copy operation
+    datatype : nii /nii.gz
     '''
     if datatype=='nii':
         subjectid =filename[:-4]

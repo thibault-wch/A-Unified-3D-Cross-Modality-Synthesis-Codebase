@@ -16,6 +16,7 @@ def recon_all(original_path, out_path ,final_path ,filename,datatype,preprocess_
     final_path : final output datapath
     subjectid : finalid
     preprocess_step : [1] for recon-all 1-5 steps [2] for the copy operation
+    datatype : nii /nii.gz
     """
     if datatype=='nii':
         subjectid =filename[:-4]
