@@ -32,7 +32,7 @@ def cal_single_performance_evaluation(image_true, image_generated, itemname, dat
     image_generated = image_generated.cuda()
 
     # metric calculation
-    mape = cal_single_mape(image_true, image_generated)
+    # mape = cal_single_mape(image_true, image_generated)
     mae = cal_single_mae(image_true, image_generated)
     psnr = cal_single_psnr(image_true, image_generated, data_range=data_range)
     ssim = ssim3D(image_true, image_generated, data_range=data_range, window_size=window_size).item()
