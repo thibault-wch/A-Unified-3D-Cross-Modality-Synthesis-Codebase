@@ -21,10 +21,11 @@ If you find our project useful, please 🌟 our projects and cite the following 
 * [ ] Publish CNN-based 3D medical cross-modality synthesis codes. (UNet, DenseUNet, SwinUNetr, etc.)
 * [ ] Publish GAN-based 3D medical cross-modality syhtesis codes. (Pix2Pix, CycleGAN, ErGAN, ShareGAN, MultiShareGAN, etc).
 * [ ] Publish Sora/DiT-version Diffusion-based 3D medical cross-modality synthesis codes.
-* [ ] Publish 3D evaluation methods (MAE, PSNR, SSIM).
+* [X] Publish **3D evaluation methods (MAE, PSNR, SSIM)**.
 * [ ] Publish a series of brain analysis and interpretable methods.
 
 
 ## Updates
 * April, 2024: Initial commit.
 * May, 2024: update data preprocessing codes for 3D MRI and PET brain images.
+* May, 2024: update basic 3D evaluation methods.
