@@ -88,7 +88,7 @@ if __name__ == '__main__':
     parser.add_argument('-datatype', type=str, default='nii', help='the data type for brain images [nii|nii.gz]')
     parser.add_argument('-original_path', type=str, default='/public/home/chenhui/Radio/NEW_BL/MRI/0_MRI_NII',
                         help='the original data path.')
-    parser.add_argument('-out_path', type=str, default='/public/home/chenhui/Radio/NEW_BL/MRI/1_After_Freesurfer',
+    parser.add_argument('-out_path', type=str, default='/public/home/chenhui/Radio/NEW_BL/MRI/1_tmp',
                         help='the tmp-freesurfer preprocessed path.')
     parser.add_argument('-final_path', type=str, default='/public/home/chenhui/Radio/NEW_BL/MRI/2_After_Final',
                         help='the final path.')
