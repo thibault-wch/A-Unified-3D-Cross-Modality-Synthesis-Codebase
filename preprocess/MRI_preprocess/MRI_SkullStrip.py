@@ -41,7 +41,7 @@ def recon_all(original_path, out_path ,final_path ,filename,datatype,preprocess_
 
     time_end_train = time.time()
     logger.info('totally train cost{:.2f}'.format(time_end_train - time_start_train))
-    logger.info('subjectID {} is already registrating'.format(subjectid))
+    logger.info('subjectID {} is already skull stripping'.format(subjectid))
 
 
 if __name__ == '__main__':
