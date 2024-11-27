@@ -10,11 +10,11 @@ To evaluate the generated images in a supervised manner, run the following comma
 
 ```
 python ./evaluation_metrics.py \
-  --out_results_dir ./ \              # Output directory for the results
-  --methodname GenPET \               # Specify the subdirectory of the generated images
-  --data_range 2.6 \                  # Specify the PSNR range for the modality
-  --window_size 11 \                  # Specify the SSIM window size
-  --real_image_path your_real_image_path \  # Path to the real image
+  --out_results_dir ./ \                            # Output directory for the results
+  --methodname GenPET \                             # Specify the subdirectory of the generated images
+  --data_range 2.6 \                                # Specify the PSNR range for the modality
+  --window_size 11 \                                # Specify the SSIM window size
+  --real_image_path your_real_image_path \          # Path to the real image
   --generated_image_path your_generated_image_path  # Path to the generated image
 ```
 
