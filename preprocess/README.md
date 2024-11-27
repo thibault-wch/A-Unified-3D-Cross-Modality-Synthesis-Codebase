@@ -1,5 +1,5 @@
 # Multi-thread MRI and PET data preprocessing pipelines
-Currently, preprocessing brain images typically requires a significant amount of time. To address this, this sub-repository provides multi-threaded preprocessing code for MRI and PET scans, organized in the following folder structure to enhance reproducibility and speed up the preprocessing process.
+Currently, preprocessing brain images typically requires a significant amount of time. To address this, this sub-repository provides **multi-threaded** preprocessing scripts for MRI and PET scans written in `Python`. The scripts are organized in the following folder structure to enhance reproducibility and accelerate the preprocessing process.
 ## Folder structure
 
 ```
@@ -18,11 +18,11 @@ Preprocess
   └─ subject_ids.xlsx (ADNI subjects used in our experiments)
 ```
 
-In this pipeline, we use several **important** neuroimaging software packages, including **ANTs, FSL,** and **FreeSurfer**, for the corresponding preprocessing steps. Note that the atlas to be registered must be in MNI space with a voxel resolution of 1mm × 1mm × 1mm.
+In this pipeline, we use several **important** neuroimaging software packages, including **ANTs, FSL,** and **FreeSurfer**, for the corresponding preprocessing steps. Note that the atlas to be registered must be in MNI space with a voxel resolution of `1mm × 1mm × 1mm`.
 
 Additionally, unlike previous work that relies on alignment to **the MNI152 space** for processing, our approach emphasizes **individual differences** in the generative process, and alignment to the MNI152 standard space is not a requirement in this study.
 
-If you find our preprocessing steps useful or if our project contributes to your work, please consider 🌟 our repository and citing the corresponding software and the following paper:
+If you find our preprocessing steps useful or if our project contributes to your work, please consider 🌟 our repository and citing **the corresponding software**❕ and the following paper:
 
 ```
 @article{wang2024joint,
