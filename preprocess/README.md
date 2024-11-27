@@ -20,15 +20,16 @@ Preprocess
 
 In this pipeline, we use several **important** neuroimaging software packages, including **ANTs, FSL,** and **FreeSurfer**, for the corresponding preprocessing steps. Note that the atlas to be registered must be in MNI space with a voxel resolution of `1mm × 1mm × 1mm`.
 
-Additionally, unlike previous work that relies on alignment to **the MNI152 space** for processing, our approach emphasizes **individual differences** in the generative process, and alignment to the MNI152 standard space is not a requirement in this study.
+**Note**: Additionally, unlike previous work that relies on alignment to **the MNI152 space** for processing, our approach emphasizes **individual differences** in the generative process, and alignment to the MNI152 standard space is not a requirement in this study.
 
+## Acknowledgement & Citation
 If you find our preprocessing steps useful or if our project contributes to your work, please consider 🌟 our repository and citing **the corresponding software**❕ and the following paper:
 
 ```
 @article{wang2024joint,
-  title = {Joint learning framework of cross-modal synthesis and diagnosis for Alzheimer’s disease by mining underlying shared modality information},
+  title = {Joint learning framework of cross-modal synthesis and diagnosis for {Alzheimer’s} disease by mining underlying shared modality information},
   author = {Wang, Chenhui and Piao, Sirong and Huang, Zhizhong and Gao, Qi and Zhang, Junping and Li, Yuxin and Shan, Hongming and others},
-  journal = {Medical Image Analysis},
+  journal = {Med. Image Anal.},
   volume = {91},
   pages = {103032},
   year = {2024},

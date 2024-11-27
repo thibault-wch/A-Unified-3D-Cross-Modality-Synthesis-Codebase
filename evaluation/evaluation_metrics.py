@@ -101,13 +101,13 @@ if __name__ == '__main__':
     # args definition
     parser = argparse.ArgumentParser()
     parser.add_argument('-out_results_dir', type=str, default='./logs', help='the log dir for evaluation.')
-    parser.add_argument('-methodname', type=str, default='ShareDiff', help='the methodname.')
+    parser.add_argument('-methodname', type=str, default='GenPET', help='the methodname.')
     parser.add_argument('-data_range', type=float, default=2.6, help='the data range for generated nii images. [!the minimum value is 0]')
     parser.add_argument('-window_size', type=int, default=11, help='the SSIM evaluation window size.')
     parser.add_argument('-real_image_path', type=str, default='/public/home/chenhui/Radio/NEW_BL/MRI/0_MRI_NII',
-                        help='the original data path.')
+                        help='your real path.')
     parser.add_argument('-generated_image_path', type=str, default='/public/home/chenhui/Radio/NEW_BL/MRI/1_After_Freesurfer',
-                        help='the tmp-freesurfer preprocessed path.')
+                        help='your generated path.')
     args = parser.parse_args()
 
     # logger establish and examine the out path
