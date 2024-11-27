@@ -1,3 +1,9 @@
+'''
+purpose: Skullstrip all the MRIs.
+Author: Chenhui Wang
+Data: 27/11/2024
+Software: Freesurfer
+'''
 import os
 import subprocess
 import time
@@ -90,9 +96,9 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     # logger establish and examine the out path
-    if not os.path.exists(args.logdir):
-        os.makedirs(args.logdir)
-    trace = logger.add(os.path.join(args.logdir, datetime.now().strftime("%Y-%m-%d  %H:%M:%S") + '.log'))
+    if not os.path.exists(args.log_dir):
+        os.makedirs(args.log_dir)
+    trace = logger.add(os.path.join(args.log_dir, datetime.now().strftime("%Y-%m-%d  %H:%M:%S") + '.log'))
     if not os.path.exists(args.out_path):
         os.makedirs(args.out_path)
 
