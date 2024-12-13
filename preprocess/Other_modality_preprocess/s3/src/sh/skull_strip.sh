@@ -16,17 +16,17 @@ antsRegistration -d $dim -r [ $imgs ,1] \
                          -t translation[ 0.1 ] \
                          -c [1000,1.e-8,20]  \
                          -s 4vox  \
-                         -f 6 -l 1 \
+                         -f 6 \
                          -m mattes[  $imgs , 1 , 32, regular, 0.1 ] \
                          -t rigid[ 0.1 ] \
                          -c [1000x1000,1.e-8,20]  \
                          -s 4x2vox  \
-                         -f 4x2 -l 1 \
+                         -f 4x2 \
                          -m mattes[  $imgs , 1 , 32, regular, 0.1 ] \
                          -t affine[ 0.1 ] \
                          -c [$its,1.e-8,20]  \
                          -s 4x2x1vox  \
-                         -f 3x2x1 -l 1 \
+                         -f 3x2x1 \
                          -o ${out_this}
 
 
